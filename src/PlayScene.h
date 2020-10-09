@@ -41,6 +41,7 @@ private:
 	Label* m_pMassLabel;
 	Label* m_pPositionLabel;
 	Label* m_pDistanceLabel;
+	Label* m_pAngleLabel;
 };
 
 #endif /* defined (__PLAY_SCENE__) */

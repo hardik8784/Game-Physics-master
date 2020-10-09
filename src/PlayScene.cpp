@@ -41,7 +41,9 @@ void PlayScene::update()
 
 	m_pPositionLabel->setText("Position of Player =" +std::to_string(m_pPlayer->getTransform()->position.x));
 
-	m_pDistanceLabel->setText("Distance =" + std::to_string(getTransform()->position.x=525.0f - m_pPlayer->getTransform()->position.x));
+	m_pDistanceLabel->setText("Distance =" + std::to_string(getTransform()->position.x = 525.0f - m_pPlayer->getTransform()->position.x));
+
+	m_pAngleLabel->setText("Angle = ");
 }
 
 void PlayScene::clean()
@@ -196,6 +198,12 @@ void PlayScene::start()
 
 	addChild(m_pDistanceLabel);
 
+	///* Angle Label */
+	m_pAngleLabel = new Label("Angle", "Consolas");
+	m_pAngleLabel->getTransform()->position = glm::vec2(400.0f, 160.0f);
+
+	addChild(m_pAngleLabel);
+
 	//// Next Button
 	//m_pNextButton = new Button("../Assets/textures/nextButton.png", "nextButton", NEXT_BUTTON);
 	//m_pNextButton->getTransform()->position = glm::vec2(500.0f, 400.0f);
@@ -252,7 +260,7 @@ void PlayScene::GUI_Function() const
 	
 	static int velocity[2] = { 5, 5 };
 	if (ImGui::SliderInt2("Throw Speed", velocity, 0, 500)) {
-		m_pBall->throwSpeed = glm::vec2(velocity[0], -velocity[1]);
+		m_pBall->throwSpeed = glm::vec2(velocity[0], -velocity[1] * 0.1);
 	}
 
 	ImGui::End();

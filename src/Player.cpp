@@ -72,6 +72,13 @@ void Player::setAnimationState(const PlayerAnimationState new_state)
 	m_currentAnimationState = new_state;
 }
 
+//float Player::checkAngle(GameObject* pGameObject)
+//{
+//	float angle;
+//
+//	//angle = asin()
+//}
+
 void Player::m_buildAnimations()
 {
 	Animation idleAnimation = Animation();

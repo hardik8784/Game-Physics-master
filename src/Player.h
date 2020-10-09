@@ -18,7 +18,7 @@ public:
 
 	// setters
 	void setAnimationState(PlayerAnimationState new_state);
-
+	//float checkAngle(GameObject* pGameObject);
 private:
 	void m_buildAnimations();
 
