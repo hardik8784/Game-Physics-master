@@ -36,7 +36,7 @@ void PlayScene::update()
 	m_pVelocityLabel->setText("Velocity = "+ std::to_string(m_pBall->throwSpeed.x));
 	/*string str;*/ /*= (m_pBall->getRigidBody()->acceleration);*/
 	m_pAccelerationLabel->setText("Acceleration = ");/* += str;*/
-
+	   
 	m_pMassLabel->setText("Mass =2.2");
 
 	m_pPositionLabel->setText("Position of Player =" +std::to_string(m_pPlayer->getTransform()->position.x));
