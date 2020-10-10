@@ -34,14 +34,14 @@ void PlayScene::update()
 	updateDisplayList();
 
 	m_pVelocityLabel->setText("Velocity = "+ std::to_string(m_pBall->throwSpeed.x));
-
-	m_pAccelerationLabel->setText("Acceleration = ");
+	/*string str;*/ /*= (m_pBall->getRigidBody()->acceleration);*/
+	m_pAccelerationLabel->setText("Acceleration = ");/* += str;*/
 
 	m_pMassLabel->setText("Mass =2.2");
 
 	m_pPositionLabel->setText("Position of Player =" +std::to_string(m_pPlayer->getTransform()->position.x));
 
-	m_pDistanceLabel->setText("Distance =" + std::to_string(getTransform()->position.x = 525.0f - m_pPlayer->getTransform()->position.x));
+	m_pDistanceLabel->setText("Distance =" + std::to_string(getTransform()->position.x = 565.0f - m_pPlayer->getTransform()->position.x));
 
 	m_pAngleLabel->setText("Angle = ");
 }
@@ -170,37 +170,37 @@ void PlayScene::start()
 
 	///* Velocity Label */
 	m_pVelocityLabel = new Label("Velocity", "Consolas");
-	m_pVelocityLabel->getTransform()->position = glm::vec2(100.0f, 40.0f);
+	m_pVelocityLabel->getTransform()->position = glm::vec2(120.0f, 40.0f);
 
 	addChild(m_pVelocityLabel);
 
 	///* Acceleration Label */
 	m_pAccelerationLabel = new Label("Acceleration", "Consolas");
-	m_pAccelerationLabel->getTransform()->position = glm::vec2(100.0f, 100.0f);
+	m_pAccelerationLabel->getTransform()->position = glm::vec2(120.0f, 100.0f);
 
 	addChild(m_pAccelerationLabel);
 
 	///* Mass Label */
 	m_pMassLabel = new Label("Mass", "Consolas");
-	m_pMassLabel->getTransform()->position = glm::vec2(100.0f, 160.0f);
+	m_pMassLabel->getTransform()->position = glm::vec2(120.0f, 160.0f);
 
 	addChild(m_pMassLabel);
 
 	///* Position Label */
 	m_pPositionLabel = new Label("Position", "Consolas");
-	m_pPositionLabel->getTransform()->position = glm::vec2(400.0f, 40.0f);
+	m_pPositionLabel->getTransform()->position = glm::vec2(420.0f, 40.0f);
 
 	addChild(m_pPositionLabel);
 
 	///* Distance Label */
 	m_pDistanceLabel = new Label("Distance", "Consolas");
-	m_pDistanceLabel->getTransform()->position = glm::vec2(400.0f, 100.0f);
+	m_pDistanceLabel->getTransform()->position = glm::vec2(420.0f, 100.0f);
 
 	addChild(m_pDistanceLabel);
 
 	///* Angle Label */
 	m_pAngleLabel = new Label("Angle", "Consolas");
-	m_pAngleLabel->getTransform()->position = glm::vec2(400.0f, 160.0f);
+	m_pAngleLabel->getTransform()->position = glm::vec2(420.0f, 160.0f);
 
 	addChild(m_pAngleLabel);
 
